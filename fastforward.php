@@ -6,11 +6,11 @@
  * Here is what a URL would look like when sending User to a help page, if the version did NOT match any videoID: http://websitename.com/videoto.php?VideoID=1&StartAt=22&Version=3
  * Assign values passed to URI, held in global variable GET, to applicable local script variables.
  * The variables below are assigned values from the link/query the User clicked on. 
- *
- *	$videoId = (string) $_GET['VideoID']; // type-casted to string, however, (int) should be used if only numbers are expected, for added security. Set by query.
- *	$startAt = (int) $_GET['StartAt']; // specific place-in-time to start youtube video, as set by query.
- *	$version = (int) $_GET['Version']; // type-casted to int as a version should be a number. Set by query.
- *	
+ */
+ 	$videoId = (string) $_GET['VideoID']; // type-casted to string, however, (int) should be used if only numbers are expected, for added security. Set by query.
+ 	$startAt = (int) $_GET['StartAt']; // specific place-in-time to start youtube video, as set by query.
+ 	$version = (int) $_GET['Version']; // type-casted to int as a version should be a number. Set by query.
+ /**	
  * Hard-code link to help page.
  */
 	$helpUrl = 'http://google.com/help'; // change this to your help page.
