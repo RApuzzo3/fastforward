@@ -13,7 +13,7 @@ Redirect users to a YouTube video from your website.
 	$arrayOfVideos = array(1=>'https://youtu.be/6avJHaC3C2U',
 			               2=>'https://youtu.be/6avJHaC3C2U');
 ```
-
+Quick tip:  If you want to use this script and track click-through rate, generate links to these YouTube videos with a link shortening tool, like bit.ly, and paste the shortened URLs into the $arrayOfVideos array. 
 ## Example
 
 ```html
