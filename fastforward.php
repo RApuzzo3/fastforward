@@ -59,28 +59,19 @@
 		}
 		return $startAt;
 	}
-/**
- * If VideoID is NOT empty
- */ 
-if ($videoId != '') {
-	
-	// If the version does NOT exist as a videoId number in the arrayOfVideos then send User to help page.
-	if (!array_key_exists($version,$arrayOfVideos)) {
-		
+
+	if ($videoId != '') {
+		// If the version does NOT exist as a videoId number in the arrayOfVideos then send User to help page.
+		if (!array_key_exists($version,$arrayOfVideos)) {
 			// this will redirect the User to the defined help page.
 			header("Location: $helpUrl"); 
 			exit();
-			
-	} else {
-		
+		} else {
 			// this will redirect the User to the defined video, by ID, found matching in arrayOfVideos.
 			header('Location: '.$arrayOfVideos[$videoId].'?t='.convertStartTimeToSeconds($startAt).'s');
 			exit();
-
+		}
 	}
-}
-print_r('to far');
-die();
-//WHEN ALL ELSE FAILS SEND USER TO ERROR PAGE.
-header("Location: $errorPage");
-exit();	
+	//WHEN ALL ELSE FAILS SEND USER TO ERROR PAGE.
+	header("Location: $errorPage");
+	exit();	
